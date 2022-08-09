@@ -96,7 +96,15 @@ You should see results from both of these queries.
 
 ### 2.6 Set up PowerBI Direct Query with Custom M Parameters
 
-A sample PBIT file is available in this repository to demonstrate how to connect PowerBI to ADX utilizing Dynamic M Query Parameters.  For this demo we've elected to use a timespan parameter to control how old the events to be ingested in our report should be.
+A [sample PBIT file](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/PBI%20Dynamic%20Query.pbit) is available in this repository to demonstrate how to connect PowerBI to ADX utilizing Dynamic M Query Parameters.  For this demo we've elected to use a timespan parameter to control how old the events to be ingested in our report should be.
+
+The query that is used to pull the events is based on this simple query:
+``` Kusto
+PageViewEvents
+| project Name, ResourceID, Timestamp_UTC, operationName, SessionID, refURI, DurationMs,PerformanceBucket
+| where Timestamp_UTC > ago(1d)
+```
+With a parameter replacing the "1d" in the PowerBI file.
 
 For a detailed write up on how to use Dynamic M Parameters refer to the [Resources](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX#30-resources) section of this repo.
 
