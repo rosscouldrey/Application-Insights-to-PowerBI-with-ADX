@@ -67,6 +67,7 @@ To do this, go to your database, select "Data connections" from the blade on the
 [Full Instructions here](https://docs.microsoft.com/en-us/azure/data-explorer/ingest-data-event-hub#connect-to-the-event-hub)
 
 In the Target table section (if you've used the values from the scripts);
+
 Table name = landing <br>
 Data format = json <br>
 Mapping name = landingMapping <br>
