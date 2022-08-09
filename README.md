@@ -84,8 +84,8 @@ You can use simple KQL to check that events are landing in your landing table, a
   landing
   | limit(5)
 ```
-<br>
-*test for data in pageviews*
+
+_test for data in pageviews table_
 ``` Kusto
 PageViewEvents
 | limit(5)
