@@ -20,8 +20,8 @@ This solution requires an application to generate events which are sent to Appli
 
 This repo will not cover how to deploy the app or configure it for Application Insights.  For a sample application please use one of these sample apps provided by Azure-Samples; <br>
 
-  -[Application Insights React Demo](https://github.com/Azure-Samples/application-insights-react-demo)
-  -[Application Insights Click Plugin Demo](https://github.com/Azure-Samples/Application-Insights-Click-Plugin-Demo)
+  - [Application Insights React Demo](https://github.com/Azure-Samples/application-insights-react-demo) <br>
+  - [Application Insights Click Plugin Demo](https://github.com/Azure-Samples/Application-Insights-Click-Plugin-Demo)
 
 ### Deploy Azure Resources
 
