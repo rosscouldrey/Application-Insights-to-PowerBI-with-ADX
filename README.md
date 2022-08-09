@@ -45,7 +45,7 @@ Create a new database inside your ADX cluster [Instructions to Create an ADX Dat
 
 For this demo we use a landing table which captures all data pushed into ADX from the Event Hub.
 
-The KQL queries to create the landing table and ingestion mapping are provided in 
+The KQL queries to create the landing table and ingestion mapping are provided [here](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/KQL%20Scripts/1.%20LandingTable_setup.csl)
 
 #### 2.33 Create the events tables, parsing functions and policies
 
@@ -54,7 +54,9 @@ For this demo we've decided to parse only 2 event types; PageViews and Events, w
 
 However, you could chose to parse as many events as you'd like (the parsing function needs to be written beyond what is provided in this repo), or even parse them to a single events table if you'd prefer.
 
-The KQL code for the parsing functions is provided in 
+The KQL code for creating the events tables and the parsing functions are provided:
+- [PageViewEvents](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/KQL%20Scripts/2.%20PageViewTable_setup.csl)
+- [AppEvents](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/KQL%20Scripts/3.%20AppEventTable_setup.csl)
 
 ### 2.4 Connect the Event Hub stream to ADX
 
