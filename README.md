@@ -24,8 +24,10 @@ This repo will not cover how to deploy the app or configure it for Application I
   - [Application Insights Click Plugin Demo](https://github.com/Azure-Samples/Application-Insights-Click-Plugin-Demo)
 
 ### 2.2 Deploy Azure Resources
+<sub>
 *instructions for creating resources available [here](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/README.md#30-resources)*
-
+</sub>
+  
 For this architecture you must deploy the following resources;
 1) Log Analytics Workspace (LAW) 
 2) Application Insights (Workspace-based)
