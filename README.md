@@ -99,6 +99,13 @@ A sample PBIT file is available in this repository to demonstrate how to connect
 
 For a detailed write up on how to use Dynamic M Parameters refer to the [Resources](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX#30-resources) section of this repo.
 
+The parameters for the PBIT file can be found in your created ADX instance;
+
+
+> ADX Cluster:  Copy the URI from the overview page of your ADX resource.  This shoudl be fully qualified (Eg. https://**myadxcluster**.canadacentral.kusto.windows.net)
+> ADX Database: This is the name of the ADX database you created.  You can find the name on the Databases blade of your ADX resoruce in the Azure Portal.
+> EventTable: This is the name of the event table to ingest; eg. **PageViewEvents**
+
 ## 3.0 Resources
 
 #### 3.1 Log Analytics Workspace
