@@ -79,13 +79,13 @@ At this point we can begin to create events to log.  If you're using the sample 
 
 You can use simple KQL to check that events are landing in your landing table, and subsequently being parsed into your events tables;
 
-*test for data in landing table
+*test for data in landing table*
 ```  Kusto
   landing
   | limit(5)
 ```
 <br>
-*test for data in pageviews
+*test for data in pageviews*
 ``` Kusto
 PageViewEvents
 | limit(5)
