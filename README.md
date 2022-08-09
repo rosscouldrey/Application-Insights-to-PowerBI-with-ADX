@@ -26,8 +26,7 @@ This repo will not cover how to deploy the app or configure it for Application I
 
 For this architecture you must deploy the following resources;
 1) Log Analytics Workspace (LAW)
-2) Application Insights (Workspace-based)
-      a) connect your App Insights to your LAW created in step 1
+2) Application Insights (Workspace-based) <br> a) connect your App Insights to your LAW created in step 1
 3) Event Hubs
 4) Azure Data Explorer (ADX)
 
