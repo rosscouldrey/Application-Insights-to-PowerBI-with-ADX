@@ -24,18 +24,22 @@ This repo will not cover how to deploy the app or configure it for Application I
   - [Application Insights Click Plugin Demo](https://github.com/Azure-Samples/Application-Insights-Click-Plugin-Demo)
 
 ### 2.2 Deploy Azure Resources
-<sub>
+
 *instructions for creating resources available [here](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/README.md#30-resources)*
-</sub>
   
 For this architecture you must deploy the following resources;
+
 1) Log Analytics Workspace (LAW) 
 2) Application Insights (Workspace-based)
-    - connect your App Insights to your LAW created in step 1
+    - connect your App Insights to your LAW created above
 4) Event Hubs
 5) Azure Data Explorer (ADX)
 
 ### 2.3 Set up Azure Data Explorer
+
+#### 2.31 Create Database
+
+#### 2.32 Create tables and ingestion
 
 ### 2.4 Set up PowerBI Direct Query with Custom M Parameters
 
