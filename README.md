@@ -67,9 +67,11 @@ To do this, go to your database, select "Data connections" from the blade on the
 [Full Instructions here](https://docs.microsoft.com/en-us/azure/data-explorer/ingest-data-event-hub#connect-to-the-event-hub)
 
 In the Target table section (if you've used the values from the scripts);
-Table name = landing
-Data format = json
-Mapping name = landingMapping
+<code>
+Table name = landing <br>
+Data format = json <br>
+Mapping name = landingMapping <br>
+  </code>
 
 ### 2.5 Start your sample app and create events
 
@@ -80,8 +82,8 @@ At this point we can begin to create events to log.  If you're using the sample 
 You can use simple KQL to check that events are landing in your landing table, and subsequently being parsed into your events tables;
 
 <code>
-  //test for data in landing table
-  landing
+  //test for data in landing table <br>
+  landing <br>
   | limit(5)
 </code>
 
