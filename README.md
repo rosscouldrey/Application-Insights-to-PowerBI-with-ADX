@@ -18,7 +18,18 @@ This solution requires an application to generate events which are sent to Appli
 ## Deployment and Usage
 ### Configure application for logging
 
+This repo will not cover how to deploy the app or configure it for Application Insights.  For a sample application please use one of these sample apps provided by Azure-Samples; 
+[Application Insights React Demo](https://github.com/Azure-Samples/application-insights-react-demo)
+[Application Insights Click Plugin Demo](https://github.com/Azure-Samples/Application-Insights-Click-Plugin-Demo)
+
 ### Deploy Azure Resources
+
+For this architecture you must deploy the following resources;
+1) Log Analytics Workspace (LAW)
+2) Application Insights (Workspace-based)
+      a) connect your App Insights to your LAW created in step 1
+3) Event Hubs
+4) Azure Data Explorer (ADX)
 
 ### Set up Azure Data Explorer
 
