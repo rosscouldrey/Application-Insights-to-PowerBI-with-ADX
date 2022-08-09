@@ -95,6 +95,10 @@ You should see results from both of these queries.
 
 ### 2.6 Set up PowerBI Direct Query with Custom M Parameters
 
+A sample PBIT file is available in this repository to demonstrate how to connect PowerBI to ADX utilizing Dynamic M Query Parameters.  For this demo we've elected to use a timespan parameter to control how old the events to be ingested in our report should be.
+
+For a detailed write up on how to use Dynamic M Parameters refer to the [Resources](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX#30-resources) section of this repo.
+
 ## 3.0 Resources
 
 #### 3.1 Log Analytics Workspace
