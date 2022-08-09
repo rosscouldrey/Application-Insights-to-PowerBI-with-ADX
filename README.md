@@ -26,8 +26,8 @@ This repo will not cover how to deploy the app or configure it for Application I
 ### 2.2 Deploy Azure Resources
 
 For this architecture you must deploy the following resources;
-1) Log Analytics Workspace (LAW) [link](3.1 Log Analytics Workspace)
-2) Application Insights (Workspace-based) 
+1) Log Analytics Workspace (LAW) [link](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/README.md#31-log-analytics-workspace)
+2) Application Insights (Workspace-based) [link](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/README.md#32-application-insights)
     - connect your App Insights to your LAW created in step 1
 4) Event Hubs
 5) Azure Data Explorer (ADX)
