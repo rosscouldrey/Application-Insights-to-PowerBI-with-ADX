@@ -26,7 +26,7 @@ This repo will not cover how to deploy the app or configure it for Application I
 ### 2.2 Deploy Azure Resources
 
 For this architecture you must deploy the following resources;
-1) Log Analytics Workspace (LAW)
+1) Log Analytics Workspace (LAW) [link](3.1 Log Analytics Workspace)
 2) Application Insights (Workspace-based) 
     - connect your App Insights to your LAW created in step 1
 4) Event Hubs
@@ -38,13 +38,16 @@ For this architecture you must deploy the following resources;
 
 ## 3.0 Resources
 
-#### 3.1 Application Insights
+#### 3.1 Log Analytics Workspace
+[Create a Log Analytics workspace](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal)
+
+#### 3.2 Application Insights
 [Create an Application Insights resource](https://docs.microsoft.com/en-us/azure/azure-monitor/app/create-workspace-resource)
 
-#### 3.2 Event Hubs
+#### 3.3 Event Hubs
 [Create an event hub using Azure portal](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create)
 
-#### 3.3 Azure Data Explorer (ADX)
+#### 3.4 Azure Data Explorer (ADX)
 [Create an Azure Data Explorer cluster and database](https://docs.microsoft.com/en-us/azure/data-explorer/create-cluster-database-portal)
 
 #### 3.4 Dynamic M Query Parameters in PowerBI
