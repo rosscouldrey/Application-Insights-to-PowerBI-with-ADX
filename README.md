@@ -39,7 +39,7 @@ For this architecture you must deploy the following resources;
 
 #### 2.31 Create Database
 
-Create a new database inside your ADX cluster
+Create a new database inside your ADX cluster <br>
 [Instructions to Create an ADX Database](https://docs.microsoft.com/en-us/azure/data-explorer/create-cluster-database-portal#create-a-database)
 
 #### 2.32 Create tables and ingestion mapping
@@ -59,9 +59,12 @@ The KQL code for creating the events tables and the parsing functions are provid
 - [PageViewEvents](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/KQL%20Scripts/2.%20PageViewTable_setup.csl)
 - [AppEvents](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/KQL%20Scripts/3.%20AppEventTable_setup.csl)
 
-### 2.4 Connect the Event Hub stream to ADX
+### 2.4 Connect the Event Hub to ADX via data connection
 
-Here we need to provide the tables and ingestion mappings so the data can flow properly.
+With our tables and ingestion mapping created, we can create a data connection between our Event Hub and our ADX database.
+
+To do this, go to your database, select "Data connections" from the blade on the left and " + Add data connection". <br>
+[Full Instructions here](https://docs.microsoft.com/en-us/azure/data-explorer/ingest-data-event-hub#connect-to-the-event-hub)
 
 ### 2.5 Test the data ingestion via KQL queries
 
