@@ -99,7 +99,7 @@ You should see results from both of these queries.
 A [sample PBIT file](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/main/PBI%20Dynamic%20Query.pbit) is available in this repository to demonstrate how to connect PowerBI to ADX utilizing Dynamic M Query Parameters.  For this demo we've elected to use a timespan parameter to control how old the events to be ingested in our report should be.
 
 The query that is used to pull the events is based on this simple query:
-``` Kusto
+``` KQL
 PageViewEvents
 | project Name, ResourceID, Timestamp_UTC, operationName, SessionID, refURI, DurationMs,PerformanceBucket
 | where Timestamp_UTC > ago(1d)
