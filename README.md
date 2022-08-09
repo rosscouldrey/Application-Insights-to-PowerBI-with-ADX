@@ -16,14 +16,14 @@ This solution requires an application to generate events which are sent to Appli
 ![Solution Architecture](https://github.com/rosscouldrey/Application-Insights-to-PowerBI-with-ADX/blob/2633b6ac066e5f6f39fc53035cf62c853041dbfa/Images/AppInsights%20to%20PowerBI%20using%20ADX%20Architecture.png)
 
 ## Deployment and Usage
-### Configure application for logging
+### 1. Configure application for logging
 
 This repo will not cover how to deploy the app or configure it for Application Insights.  For a sample application please use one of these sample apps provided by Azure-Samples; <br>
 
   - [Application Insights React Demo](https://github.com/Azure-Samples/application-insights-react-demo) <br>
   - [Application Insights Click Plugin Demo](https://github.com/Azure-Samples/Application-Insights-Click-Plugin-Demo)
 
-### Deploy Azure Resources
+### 2. Deploy Azure Resources
 
 For this architecture you must deploy the following resources;
 1) Log Analytics Workspace (LAW)
@@ -32,9 +32,9 @@ For this architecture you must deploy the following resources;
 4) Event Hubs
 5) Azure Data Explorer (ADX)
 
-### Set up Azure Data Explorer
+### 3. Set up Azure Data Explorer
 
-### Set up PowerBI Direct Query with Custom M Parameters
+### 4. Set up PowerBI Direct Query with Custom M Parameters
 
 ## Resources
 
