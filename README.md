@@ -66,7 +66,24 @@ With our tables and ingestion mapping created, we can create a data connection b
 To do this, go to your database, select "Data connections" from the blade on the left and " + Add data connection". <br>
 [Full Instructions here](https://docs.microsoft.com/en-us/azure/data-explorer/ingest-data-event-hub#connect-to-the-event-hub)
 
-### 2.5 Test the data ingestion via KQL queries
+In the Target table section (if you've used the values from the scripts);
+Table name = landing
+Data format = json
+Mapping name = landingMapping
+
+### 2.5 Start your sample app and create events
+
+At this point we can begin to create events to log.  If you're using the sample apps provided, follow the directions to start the app, then visit the app and click around to generate events.
+
+### 2.6 Test the data ingestion via KQL queries
+
+You can use simple KQL to check that events are landing in your landing table, and subsequently being parsed into your events tables;
+
+<code>
+  //test for data in landing table
+  landing
+  | limit(5)
+</code>
 
 ### 2.6 Set up PowerBI Direct Query with Custom M Parameters
 
