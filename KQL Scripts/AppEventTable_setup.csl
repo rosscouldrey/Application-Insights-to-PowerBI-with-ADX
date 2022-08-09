@@ -1,0 +1,51 @@
+//STEP 3: Set up Events table and parsing function
+
+//create table for AppEvents
+.create-merge table AppEvents 
+(
+    EventType: string 
+    ,Name: string 
+    ,ResourceID: string
+    ,Timestamp_UTC: datetime 
+    ,operationName: string
+    ,SessionID: string
+    ,refURI: string
+    ,BaseTypeSource: string
+    ,ActionType: string
+    ,ClickCoordinates: string
+    ,TargetURI: string
+    ,PageName: string
+    ,TimeToAction: int 
+    ,Behaviour: int 
+)
+
+
+//Create parsing function for PageViews from landing
+.create-or-alter function ParseAppEvent() { 
+    landing
+    | extend body=parse_json(document)
+    | mv-expand payload = body.records
+    | project EventType = tostring(payload["Type"])
+        ,Name = tostring(payload["Name"])
+        ,ResourceID = tostring(payload["resourceId"])
+        ,Timestamp_UTC = todatetime(payload["time"])
+        ,operationName = tostring(payload["OperationName"])
+        ,SessionID = tostring(payload["SessionId"])
+        ,refURI = tostring(payload["Properties"]["refUri"])
+        ,BaseTypeSource = tostring(payload["Properties"]["baseTypeSource"]) //AppEvent
+        ,ActionType = tostring(payload["Properties"]["actionType"]) //AppEvent
+        ,ClickCoordinates = tostring(payload["Properties"]["clickCoordinates"]) //AppEvent
+        ,TargetURI = tostring(payload["Properties"]["targetUri"]) //AppEvent
+        ,PageName = tostring(payload["Properties"]["pageName"]) //AppEvent
+        ,TimeToAction = toint(payload["Measurements"]["timeToAction"]) //AppEvent
+        ,Behaviour = toint(payload["Measurements"]["behavior"]) //AppEvent
+    | where EventType == "AppEvents"
+}
+
+//Create update policy for PageViews
+.alter table AppEvents policy update 
+```
+[
+    {"IsEnabled": true, "Source": "landing", "Query": "ParseAppEvent", "IsTransactional": true}
+]
+```

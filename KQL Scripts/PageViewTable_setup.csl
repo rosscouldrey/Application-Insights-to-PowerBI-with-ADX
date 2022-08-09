@@ -1,0 +1,40 @@
+// STEP 2: Create PageView Events table and parsing function
+
+//Create the table to hold the AppPageViews events
+.create-merge table PageViewEvents 
+(
+    EventType: string,
+    Name: string ,
+    ResourceID: string ,
+    Timestamp_UTC: datetime ,
+    operationName: string ,
+    SessionID: string ,
+    refURI: string,
+    DurationMs: int,
+    PerformanceBucket:string
+)
+
+//Create parsing function for PageViews from landing
+.create-or-alter function ParsePageViewEvent() { 
+    landing
+    | extend body=parse_json(document)
+    | mv-expand payload = body.records
+    | project EventType = tostring(payload["Type"]),
+        Name = tostring(payload["Name"]),
+        ResourceID = tostring(payload["resourceId"]),
+        Timestamp_UTC = todatetime(payload["time"]),
+        operationName = tostring(payload["OperationName"]),
+        SessionID = tostring(payload["SessionId"]),
+        refURI = tostring(payload["Properties"]["refUri"]),
+        DurationMs = toint(payload["DurationMs"]),
+        PerformanceBucket = tostring(payload["PerformanceBucket"]) 
+    | where EventType == "AppPageViews"
+}
+
+//Create update policy for PageViews
+.alter table PageViewEvents policy update 
+```
+[
+    {"IsEnabled": true, "Source": "landing", "Query": "ParsePageViewEvent", "IsTransactional": true}
+]
+```

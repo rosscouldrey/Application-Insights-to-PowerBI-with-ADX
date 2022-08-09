@@ -1,0 +1,13 @@
+﻿//STEP 1: Set up Landing Table
+
+//create a simple table to land all raw data - we call this table "landing"
+.create-merge table landing(document:dynamic)
+
+//create the ingestion logic for our table - simply grab all the data and land it in the document column
+.create table landing ingestion json mapping 'landingMapping' '[{"column":"document","path":"$","datatype":"dynamic"}]'
+
+//enable streaming ingestion so we can have Event Hub stream the data in
+.alter table landing policy streamingingestion enable;
+
+//clear table whenever we want to start fresh
+//.clear table landing data
