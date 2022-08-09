@@ -39,7 +39,7 @@ For this architecture you must deploy the following resources;
 
 #### 2.31 Create Database
 
-Create a new database inside your ADX cluster
+Create a new database inside your ADX cluster [Instructions to Create an ADX Database](https://docs.microsoft.com/en-us/azure/data-explorer/create-cluster-database-portal#create-a-database)
 
 #### 2.32 Create tables and ingestion mapping
 
