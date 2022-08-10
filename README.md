@@ -111,17 +111,17 @@ For a detailed write up on how to use Dynamic M Parameters refer to the [Resourc
 The parameters for the PBIT file can be found in your created ADX instance;
 
 
-_ADX Cluster_  <br>
-Copy the URI from the overview page of your ADX resource.  This should be fully qualified <br> (Eg. https://**MYADXCLUSTER**.canadacentral.kusto.windows.net)
+__ADX Cluster__  <br>
+_Copy the URI from the overview page of your ADX resource.  This should be fully qualified_ <br> (Eg. https://**MYADXCLUSTER**.canadacentral.kusto.windows.net)
 
-_ADX Database_ <br>
-This is the name of the ADX database you created.  You can find the name on the Databases blade of your ADX resoruce in the Azure Portal.
+__ADX Database__ <br>
+_This is the name of the ADX database you created.  You can find the name on the Databases blade of your ADX resoruce in the Azure Portal._
 
-_EventTable_<br>
-This is the name of the event table to ingest; eg. **PageViewEvents**
+__EventTable__<br>
+_This is the name of the event table to ingest; eg. **PageViewEvents**_
 
-_TimeToView_ <br>
-This is a [timespan](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/scalar-data-types/timespan) parameter and should be entered as such.
+__TimeToView__ <br>
+_This is a [timespan](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/scalar-data-types/timespan) parameter and should be entered as such._
 eg. 1d
 
 ## 3.0 Resources
